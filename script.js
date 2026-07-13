@@ -3,7 +3,7 @@
 // script.js
 // ======================================
 
-// Todas as páginas
+// Todas as página
 const paginas = document.querySelectorAll(".pagina");
 
 // Todos os botões do menu lateral
