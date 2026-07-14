@@ -1,12 +1,3 @@
-// ======================================
-// PLAMONT REPORT CENTER
-// script.js V2
-// ======================================
-
-// ======================================
-// NAVEGAÇÃO
-// ======================================
-
 const paginas = document.querySelectorAll(".pagina");
 const botoes = document.querySelectorAll(".menu-btn");
 
