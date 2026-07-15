@@ -767,4 +767,118 @@ body{
     }
 }
 
+/* =====================================================
+   ABAS OS 441
+===================================================== */
 
+.os441-tabs{
+    display:flex;
+    gap:12px;
+    margin:20px 0 30px;
+    padding:6px;
+    background:#eef3f8;
+    border-radius:16px;
+    border:1px solid rgba(11,59,99,.08);
+    overflow-x:auto;
+}
+
+.os441-tab{
+    border:none;
+    background:#ffffff;
+    color:#0B3B63;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s ease;
+    white-space:nowrap;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.os441-tab:hover{
+    background:#eaf3ff;
+    transform:translateY(-2px);
+}
+
+.os441-tab.ativa{
+    background:#0B3B63;
+    color:#fff;
+    box-shadow:0 8px 18px rgba(11,59,99,.25);
+}
+
+.os441-conteudo{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    .os441-tabs{
+        gap:8px;
+        padding:4px;
+    }
+
+    .os441-tab{
+        flex:0 0 auto;
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+}
+
+/* =====================================================
+   ABAS OS 442
+===================================================== */
+
+.os442-tabs{
+    display:flex;
+    gap:12px;
+    margin:20px 0 30px;
+    padding:6px;
+    background:#eef3f8;
+    border-radius:16px;
+    border:1px solid rgba(11,59,99,.08);
+    overflow-x:auto;
+}
+
+.os442-tab{
+    border:none;
+    background:#ffffff;
+    color:#0B3B63;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s ease;
+    white-space:nowrap;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.os442-tab:hover{
+    background:#eaf3ff;
+    transform:translateY(-2px);
+}
+
+.os442-tab.ativa{
+    background:#0B3B63;
+    color:#fff;
+    box-shadow:0 8px 18px rgba(11,59,99,.25);
+}
+
+.os442-conteudo{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    .os442-tabs{
+        gap:8px;
+        padding:4px;
+    }
+
+    .os442-tab{
+        flex:0 0 auto;
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+}

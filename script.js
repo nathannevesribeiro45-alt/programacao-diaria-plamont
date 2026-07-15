@@ -265,3 +265,104 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarAba440("integridade");
 
 });
+
+
+
+// ======================================
+// ABAS DA OS 441
+// ======================================
+
+function mostrarAba441(aba) {
+
+    // Alterna botão ativo
+    document.querySelectorAll(".os441-tab").forEach(btn => {
+        btn.classList.toggle("ativa", btn.dataset.tab === aba);
+    });
+
+    // Esconde todas as abas
+    document.querySelectorAll("#os441 .os441-conteudo").forEach(sec => {
+        sec.style.display = "none";
+    });
+
+    // Mostra apenas a aba selecionada
+    const abaSelecionada = document.getElementById("aba-" + aba);
+
+    if (abaSelecionada) {
+
+        abaSelecionada.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+}
+// Inicialização das abas da OS 441
+document.addEventListener("DOMContentLoaded", () => {
+
+    const abas = document.querySelectorAll(".os441-tab");
+
+    abas.forEach(botao => {
+
+        botao.addEventListener("click", () => {
+            mostrarAba441(botao.dataset.tab);
+        });
+
+    });
+
+    // Abre Desgaste por padrão
+    mostrarAba441("desgaste");
+
+});
+
+// ======================================
+// ABAS DA OS 442
+// ======================================
+
+function mostrarAba442(aba) {
+
+    // Alterna botão ativo
+    document.querySelectorAll(".os442-tab").forEach(btn => {
+        btn.classList.toggle("ativa", btn.dataset.tab === aba);
+    });
+
+    // Esconde todas as abas
+    document.querySelectorAll("#os442 .os442-conteudo").forEach(sec => {
+        sec.style.display = "none";
+    });
+
+    // Mostra apenas a aba selecionada
+    const abaSelecionada = document.getElementById("aba-" + aba);
+
+    if (abaSelecionada) {
+
+        abaSelecionada.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+}
+
+// Inicialização das abas da OS 442
+document.addEventListener("DOMContentLoaded", () => {
+
+    const abas = document.querySelectorAll(".os442-tab");
+
+    abas.forEach(botao => {
+
+        botao.addEventListener("click", () => {
+            mostrarAba442(botao.dataset.tab);
+        });
+
+    });
+
+    // Abre Ambiental por padrão
+    mostrarAba442("ambiental");
+
+});
