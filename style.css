@@ -709,3 +709,62 @@ body{
 .splash-contracts{font-size:1rem;line-height:1.7}
 .splash-subtitle{font-size:.95rem;margin-bottom:60px}
 }
+
+
+/* =====================================================
+   ABAS OS 440
+===================================================== */
+
+.os440-tabs{
+    display:flex;
+    gap:12px;
+    margin:20px 0 30px;
+    padding:6px;
+    background:#eef3f8;
+    border-radius:16px;
+    border:1px solid rgba(11,59,99,.08);
+    overflow-x:auto;
+}
+
+.os440-tab{
+    border:none;
+    background:#ffffff;
+    color:#0B3B63;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s ease;
+    white-space:nowrap;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.os440-tab:hover{
+    background:#eaf3ff;
+    transform:translateY(-2px);
+}
+
+.os440-tab.ativa{
+    background:#0B3B63;
+    color:#fff;
+    box-shadow:0 8px 18px rgba(11,59,99,.25);
+}
+
+.os440-conteudo{
+    display:block;
+}
+
+@media(max-width:768px){
+    .os440-tabs{
+        gap:8px;
+        padding:4px;
+    }
+
+    .os440-tab{
+        flex:0 0 auto;
+        padding:10px 18px;
+        font-size:14px;
+    }
+}
+
+

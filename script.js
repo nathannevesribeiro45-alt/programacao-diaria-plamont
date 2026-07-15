@@ -218,3 +218,50 @@ document.addEventListener("DOMContentLoaded", () => {
     iniciarSplash();
 
 });
+// ======================================
+// ABAS DA OS 440
+// ======================================
+
+function mostrarAba440(aba) {
+
+    // Alterna botão ativo
+    document.querySelectorAll(".os440-tab").forEach(btn => {
+        btn.classList.toggle("ativa", btn.dataset.tab === aba);
+    });
+
+    // Esconde todas as abas
+    document.querySelectorAll("#os440 .os440-conteudo").forEach(sec => {
+        sec.style.display = "none";
+    });
+
+    // Mostra apenas a aba selecionada
+    const abaSelecionada = document.getElementById("aba-" + aba);
+
+    if (abaSelecionada) {
+        abaSelecionada.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+}
+
+// Inicialização das abas da OS 440
+document.addEventListener("DOMContentLoaded", () => {
+
+    const abas = document.querySelectorAll(".os440-tab");
+
+    abas.forEach(botao => {
+
+        botao.addEventListener("click", () => {
+            mostrarAba440(botao.dataset.tab);
+        });
+
+    });
+
+    // Abre Integridade por padrão
+    mostrarAba440("integridade");
+
+});
