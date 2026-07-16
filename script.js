@@ -68,11 +68,16 @@ function atualizarTotalQLP() {
 
         if (blocos.length < 2) return;
 
-        const blocoQLP = blocos[0];
+        const blocoQLP = [...pagina.querySelectorAll(".bloco")].find(bloco => {
+    const titulo = bloco.querySelector("h2");
+    return titulo && titulo.textContent.includes("Efetivo");
+});
 
-        const listas = blocoQLP.querySelectorAll(".efetivo-coluna ul");
+if (!blocoQLP) return;
 
-        if (listas.length === 0) return;
+const listas = blocoQLP.querySelectorAll(".efetivo-coluna ul");
+
+if (listas.length === 0) return;
 
         let total = 0;
 
@@ -104,12 +109,16 @@ function atualizarHistograma() {
         const blocos = pagina.querySelectorAll(".bloco");
 
         if (blocos.length < 2) return;
+const blocoHistograma = [...pagina.querySelectorAll(".bloco")].find(bloco => {
+    const titulo = bloco.querySelector("h2");
+    return titulo && titulo.textContent.includes("Histograma");
+});
 
-        const blocoHistograma = blocos[1];
+if (!blocoHistograma) return;
 
-        const listas = blocoHistograma.querySelectorAll(".efetivo-coluna ul");
+const listas = blocoHistograma.querySelectorAll(".efetivo-coluna ul");
 
-        if (listas.length === 0) return;
+if (listas.length === 0) return;
 
         let total = 0;
 
